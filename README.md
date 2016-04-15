@@ -6,7 +6,7 @@ API key with the module to list your forms, and access responses.
 
 ### Install
 ```
-npm install typeform-node-ap
+npm install typeform-node-api
 ```
 
 ### Usage
