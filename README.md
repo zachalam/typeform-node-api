@@ -4,12 +4,17 @@ The UNOFFICIAL node.js wrapper for the typeform API.
 This Node.js module works with the popular form creation service Typeform - https://www.typeform.com/ - use your
 API key with the module to list your forms, and access responses.
 
+### Install
+```
+npm install typeform-node-ap
+```
+
 ### Usage
 
 Require typeform module and instantiate new object.
 ```js
 // import typeform module
-var Typeform = require('typeform');
+var Typeform = require('typeform-node-api');
 // create new instance of Typeform object.
 var typeform_api = new Typeform('api_key');
 ```
