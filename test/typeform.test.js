@@ -48,8 +48,8 @@ describe("Typeform API", function() {
        it("should return an object", function(done) {
           
           TypeformAPI.getFormStructure("BoulG1",function(body) { 
-              //expect(body).to.be.an("object");
-              console.log(body["fields"]);
+              expect(body).to.be.an("object");
+              console.log();
               done(); 
               
           });
