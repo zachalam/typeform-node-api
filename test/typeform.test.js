@@ -5,7 +5,7 @@ var Typeform = require("../lib/typeform");
 
 describe("Typeform API", function() {
     
-    var TypeformAPI = new Typeform('TEST_API_KEY');
+    var TypeformAPI = new Typeform('d03b83912ef2aa5b98114c443c9dc628de459caa');
     
     describe("generate_url()", function() {
        it("Should generate a URL resource.", function(done) {
@@ -60,7 +60,7 @@ describe("Typeform API", function() {
     describe("getFormResponses()", function() {
        it("should return an object", function(done) {
           
-          TypeformAPI.getAllFormResponses("BoulG1",function(body) { 
+          TypeformAPI.getFormResponses("BoulG1",function(body) { 
               expect(body).to.be.an("object");
               console.log(body);
               done(); 
@@ -70,5 +70,30 @@ describe("Typeform API", function() {
        }); 
     }); // end getFormStructure();    
     
+    describe("getCompletedFormResponses()", function() {
+       it("should return an object", function(done) {
+          
+          TypeformAPI.getCompletedFormResponses("BoulG1",function(body) { 
+              expect(body).to.be.an("object");
+              console.log(body);
+              done(); 
+              
+          });
+
+       }); 
+    }); // end getFormStructure();    
+
+    describe("getIncompleteFormResponses()", function() {
+       it("should return an object", function(done) {
+          
+          TypeformAPI.getIncompleteFormResponses("BoulG1",function(body) { 
+              expect(body).to.be.an("object");
+              console.log(body);
+              done(); 
+              
+          });
+
+       }); 
+    }); // end getFormStructure();  
     
 }); // end describe - Typeform API

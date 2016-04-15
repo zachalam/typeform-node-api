@@ -14,6 +14,8 @@ var Typeform = require('typeform');
 var typeform_api = new Typeform('api_key');
 ```
 
+___
+
 Get a response that lists typeforms we have access to:
 ```js
 typeform_api.getForms(function(data) {
@@ -22,10 +24,39 @@ typeform_api.getForms(function(data) {
 ```
 => [ { id: 'B1ulG1', name: 'Registration Form' }, { id: 'WZRt5l', name: 'Contact Form' } ]
 
-Get a  response that details specific information about a form:
+___
+
+Get a response that details specific information about a form:
 ```js
 typeform_api.getFormStructure(function('FORM_ID',data) {
     // data now contains a object with details about your form
-    // body["fields"] - contains an array of fields in your form
+    // data["fields"] - contains an array of fields in your form
+});
+```
+=> { uid: 'BoulG1', fields: [ { id: 'textfield_20678701', type: 'textfield', question: 'What\'s your name?' }] }
+
+___
+
+Get a response that lists complete and incomplete form responses.
+```js
+typeform_api.getFormResponses(function('FORM_ID',data) {
+    // data now contains a object with form responses.
+});
+```
+___
+
+Get a response that lists complete form responses.
+```js
+typeform_api.getCompletedFormResponses(function('FORM_ID',data) {
+    // data now contains a object with form responses.
+});
+```
+
+___
+
+Get a response that lists incomplete form responses.
+```js
+typeform_api.getIncompleteFormResponses(function('FORM_ID',data) {
+    // data now contains a object with form responses.
 });
 ```
