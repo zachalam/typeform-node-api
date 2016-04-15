@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # typeform-node-api
 The UNOFFICIAL node.js wrapper for the typeform API.
 
@@ -29,3 +30,19 @@ typeform_api.getFormStructure(function('FORM_ID',data) {
     // body["fields"] - contains an array of fields in your form
 });
 ```
+=======
+# typeform-node-api
+The UNOFFICIAL node.js wrapper for the typeform API.
+
+This Node.js module works with the popular form creation service Typeform - https://www.typeform.com/ - use your
+API key with the module to list your forms, and access responses.
+
+### Usage
+
+```js
+// import typeform module
+var Typeform = require('typeform');
+// create new instance of Typeform object.
+var typeform_api = new Typeform('api_key');
+```
+>>>>>>> 4780a9c3eed51b282cb7895c1d012878a1f2cd39
